@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Ignore the backend folder so PHP files still work!
+  RewriteCond %{REQUEST_URI} !^/backend/
+
+  # If the requested file or directory doesn't exist, route it to index.html
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

@@ -1,0 +1,13 @@
+# Admin Folder Protection and Configuration
+# Ensure index.php handles the root /admin request
+DirectoryIndex index.php
+
+# Prevent listing files/folders for security
+Options -Indexes
+
+# If using Apache, ensure CORS is handled if needed
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>

@@ -1,0 +1,60 @@
+:root {
+  --text: #a1a1aa;
+  --text-h: #ffffff;
+  --bg: #000000;
+  --border: #27272a;
+  --code-bg: #121212;
+  --accent: #8b5cf6;
+  --accent-hover: #a78bfa;
+  --accent-bg: rgba(139, 92, 246, 0.15);
+  --accent-border: rgba(139, 92, 246, 0.5);
+  --shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.7), 0 10px 15px -6px rgba(0, 0, 0, 0.5);
+  --glass-bg: rgba(0, 0, 0, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --page-bg: #000000;
+
+  --sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --heading: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/1.5 var(--sans);
+  color-scheme: dark;
+  color: var(--text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: var(--bg);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+p {
+  margin: 0;
+}
